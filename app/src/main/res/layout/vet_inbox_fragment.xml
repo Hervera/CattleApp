@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VetInboxFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="Veterinarian Account"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <!--<TabWidget-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--</TabWidget>-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_vet_new_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:foregroundTint="@color/colorBlack"
+        android:src="@android:drawable/ic_dialog_email"
+        app:backgroundTint="@color/colorButton"
+        app:fabSize="normal" />
+
+</FrameLayout>

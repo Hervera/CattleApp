@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Breeder Account"> </item>
+        <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/breeder_inbox_id"
+                android:icon="@drawable/ic_message_black_48dp"
+                android:title="Inbox"></item>
+            <item
+                android:id="@+id/view_animals_id"
+                android:icon="@drawable/view_animals_48"
+                android:title="View Animals"></item>
+
+            <item
+                android:id="@+id/view_veterinarians_id"
+                android:icon="@drawable/ic_group_black_48dp"
+                android:title="View Veterinarians"></item>
+            <item
+                android:id="@+id/breeder_update_profile_id"
+                android:icon="@drawable/ic_person_black_24dp"
+                android:title="Update Profile"></item>
+        </group>
+
+</menu>

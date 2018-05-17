@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RwandaCattle App</string>
+    <string name="vet">Veterinaire</string>
+    <string name="breeder">Eleveur</string>
+    <string name="choose_job">Choisissez votre emploi</string>
+    <string name="chooseLang">Choisissez une language</string>
+    <string name="textLinkRegister">New User? Register here</string>
+    <string name="login">Login</string>
+    <string name="textRegister">Register</string>
+    <string name="textVetLogin">Veterinarian Login</string>
+    <string name="textBreederLogin">Breeder Login</string>
+    <string name="textLinkLogin">Already a member? Login</string>
+    <string name="createAccount">Create Account</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+</resources>

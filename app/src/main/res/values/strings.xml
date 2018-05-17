@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name" translatable="false">RwandaCattle App</string>
+    <string name="drawer_open" translatable="false">drawer open</string>
+    <string name="drawer_close" translatable="false">drawer close</string>
+
+    <string-array name="language_option">
+        <item>English</item>
+        <item>French</item>
+        <item>Kinyarwanda</item>
+    </string-array>
+
+    <string-array name="animal_categories_array">
+        <item>Cat</item>
+        <item>Cow</item>
+        <item>Chicken</item>
+        <item>Dog</item>
+        <item>Goat</item>
+        <item>Horse</item>
+        <item>Pig</item>
+        <item>Rabbit</item>
+        <item>Sheep</item>
+    </string-array>
+
+    <string name="gender" translatable="false">Gender</string>
+    <string-array name="animal_gender_array">
+        <item name="male">Male</item>
+        <item name="female">Female</item>
+    </string-array>
+
+    <string-array name="animal_size_array">
+        <item>Big</item>
+        <item>Medium</item>
+        <item>Small</item>
+    </string-array>
+
+    <string name="breeder">Breeder</string>
+    <string name="vet">Veterinarian</string>
+    <string name="choose_job">Choose your job</string>
+    <string name="chooseLang">Choose a language</string>
+    <string name="textLinkRegister">New User? Register here</string>
+    <string name="login">Login</string>
+    <string name="textRegister">Register</string>
+    <string name="textVetLogin">Veterinarian Login</string>
+    <string name="textBreederLogin">Breeder Login</string>
+    <string name="textLinkLogin">Already a member? Login</string>
+    <string name="createAccount">Create Account</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_activity_main2" translatable="false">Main2Activity</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RwandaCattle App</string>
+    <string name="vet">Veterineri</string>
+    <string name="breeder">Umworozi</string>
+    <string name="choose_job">Hitamo akazi kawe</string>
+    <string name="chooseLang">Hitamo ururimi</string>
+    <string name="textLinkRegister">Uri mushya? Iyandikishe</string>
+    <string name="login">Injira</string>
+    <string name="textRegister">Iyandikishe</string>
+    <string name="textVetLogin">Veterineri injira</string>
+    <string name="textBreederLogin">Breeder Login</string>
+    <string name="textLinkLogin">Usanzwe mo? Injira</string>
+    <string name="createAccount">Funguza Konte</string>
+    <string name="name">Amazina</string>
+    <string name="email">Imeli</string>
+    <string name="password">Amagambo y\'ibanga</string>
+</resources>

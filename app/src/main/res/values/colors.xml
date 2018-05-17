@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fff</color>
+    <color name="colorPrimaryDark">#c99548</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorJobName">#ef999a</color>
+    <color name="colorButton">#ffcc80</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+
+    <!--android standards name-->
+    <color name="windowBackground">#ffffff</color>
+    <color name="colorSecondary">#000000</color>
+</resources>
