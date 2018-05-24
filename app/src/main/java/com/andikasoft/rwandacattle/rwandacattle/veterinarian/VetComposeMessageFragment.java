@@ -1,4 +1,5 @@
-package com.andikasoft.rwandacattle.rwandacattle;
+package com.andikasoft.rwandacattle.rwandacattle.veterinarian;
+
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,10 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.andikasoft.rwandacattle.rwandacattle.R;
 
-public class VetViewProfileFragment extends Fragment {
 
-    public VetViewProfileFragment() {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class VetComposeMessageFragment extends Fragment {
+
+
+    public VetComposeMessageFragment() {
         // Required empty public constructor
     }
 
@@ -18,8 +25,7 @@ public class VetViewProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.vet_view_profile_fragment, container, false);
+        return inflater.inflate(R.layout.vet_compose_message_fragment, container, false);
     }
-
 
 }

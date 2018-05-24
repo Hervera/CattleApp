@@ -1,10 +1,8 @@
-package com.andikasoft.rwandacattle.rwandacattle;
-
+package com.andikasoft.rwandacattle.rwandacattle.veterinarian;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -19,8 +17,11 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.andikasoft.rwandacattle.rwandacattle.HelpActivity;
+import com.andikasoft.rwandacattle.rwandacattle.R;
+import com.andikasoft.rwandacattle.rwandacattle.breeder.BreederViewProfileFragment;
 
-public class BreederHomeActivity extends AppCompatActivity {
+public class VetHomeActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     private Toolbar toolbar;
     ActionBarDrawerToggle actionBarDrawerToggle;
@@ -30,7 +31,7 @@ public class BreederHomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.breeder_home_activity);
+        setContentView(R.layout.vet_home_activity);
 
         toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
@@ -46,57 +47,49 @@ public class BreederHomeActivity extends AppCompatActivity {
 
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
 
-
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.breeder_main_container, new BreederInboxFragment());
+        fragmentTransaction.replace(R.id.vet_main_container, new VetInboxFragment());
         fragmentTransaction.commit();
 
+        navigationView = (NavigationView) findViewById(R.id.vet_navigation_view);
 
-//        TextView myProfile = findViewById(R.id.breeder_profile_id);
-//        myProfile.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Fragment someFragment = new BreederViewProfileFragment();
-//                fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//                fragmentTransaction.replace(R.id.breeder_main_container,someFragment); // give your fragment container id in first parameter
-//                fragmentTransaction.addToBackStack(null);  // if written, this transaction will be added to backstack
-//                fragmentTransaction.commit();
-//                drawerLayout.closeDrawers();
-//            }
-//        });
+        View view = navigationView.getHeaderView(0);
+        TextView myProfile = view.findViewById(R.id.vet_profile_id);
+        myProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment someFragment = new VetViewProfileFragment();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.vet_main_container,someFragment); // give your fragment container id in first parameter
+                fragmentTransaction.addToBackStack(null);  // if written, this transaction will be added to backstack
+                fragmentTransaction.commit();
+                drawerLayout.closeDrawers();
+            }
+        });
 
-        navigationView = (NavigationView) findViewById(R.id.breeder_navigation_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.breeder_inbox_id:
+                    case R.id.vet_inbox_id:
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.breeder_main_container, new BreederInboxFragment());
+                        fragmentTransaction.replace(R.id.vet_main_container, new VetInboxFragment());
                         fragmentTransaction.commit();
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
                         break;
 
-                    case R.id.view_animals_id:
+                    case R.id.view_breeders_id:
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.breeder_main_container, new BreederViewAnimalsFragment());
+                        fragmentTransaction.replace(R.id.vet_main_container, new VetViewBreedersFragment());
                         fragmentTransaction.commit();
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
                         break;
 
-                    case R.id.view_veterinarians_id:
+                    case R.id.vet_update_profile_id:
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.breeder_main_container, new BreederViewVetsFragment());
-                        fragmentTransaction.commit();
-                        item.setChecked(true);
-                        drawerLayout.closeDrawers();
-                        break;
-
-                    case R.id.breeder_update_profile_id:
-                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.breeder_main_container, new BreederUpdateProfileFragment());
+                        fragmentTransaction.replace(R.id.vet_main_container, new VetUpdateProfileFragment());
                         fragmentTransaction.commit();
                         item.setChecked(true);
                         drawerLayout.closeDrawers();

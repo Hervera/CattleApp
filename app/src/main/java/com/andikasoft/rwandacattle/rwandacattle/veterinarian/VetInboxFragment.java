@@ -1,16 +1,14 @@
-package com.andikasoft.rwandacattle.rwandacattle;
+package com.andikasoft.rwandacattle.rwandacattle.veterinarian;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.andikasoft.rwandacattle.rwandacattle.R;
 
 
 public class VetInboxFragment extends Fragment {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BreederInboxFragment">
+    tools:context=".breeder.BreederInboxFragment">
 
     <TextView
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
         android:layout_margin="16dp"
         android:foregroundTint="@color/colorBlack"
         android:src="@android:drawable/ic_dialog_email"
-        app:backgroundTint="@color/colorButton"
+        app:backgroundTint="@color/colorAccent"
         app:elevation="6dp"
         app:fabSize="normal"
         app:pressedTranslationZ="12dp" />

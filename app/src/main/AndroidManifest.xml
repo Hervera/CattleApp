@@ -20,22 +20,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BreederLoginActivity"
+            android:name=".breeder.BreederLoginActivity"
             android:parentActivityName="com.andikasoft.rwandacattle.rwandacattle.MainActivity"></activity>
         <activity
-            android:name=".BreederRegisterActivity"
-            android:parentActivityName="com.andikasoft.rwandacattle.rwandacattle.BreederLoginActivity"></activity>
+            android:name=".breeder.BreederRegisterActivity"
+            android:parentActivityName="com.andikasoft.rwandacattle.rwandacattle.breeder.BreederLoginActivity"></activity>
         <activity
-            android:name=".VetLoginActivity"
+            android:name=".veterinarian.VetLoginActivity"
             android:parentActivityName="com.andikasoft.rwandacattle.rwandacattle.MainActivity"></activity>
         <activity
-            android:name=".VetRegisterActivity"
-            android:parentActivityName="com.andikasoft.rwandacattle.rwandacattle.VetLoginActivity"></activity>
+            android:name=".veterinarian.VetRegisterActivity"
+            android:parentActivityName="com.andikasoft.rwandacattle.rwandacattle.veterinarian.VetLoginActivity"></activity>
         <activity
             android:name=".HelpActivity"
             android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".VetHomeActivity"></activity>
-        <activity android:name=".BreederHomeActivity"></activity>
+        <activity android:name=".veterinarian.VetHomeActivity"></activity>
+        <activity android:name=".breeder.BreederHomeActivity"></activity>
 
     </application>
 

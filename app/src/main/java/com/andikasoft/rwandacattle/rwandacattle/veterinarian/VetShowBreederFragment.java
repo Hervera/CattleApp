@@ -1,4 +1,4 @@
-package com.andikasoft.rwandacattle.rwandacattle;
+package com.andikasoft.rwandacattle.rwandacattle.veterinarian;
 
 
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.andikasoft.rwandacattle.rwandacattle.R;
 
 
 /**

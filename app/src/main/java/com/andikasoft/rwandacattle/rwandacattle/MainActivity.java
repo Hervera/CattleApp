@@ -5,27 +5,29 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.andikasoft.rwandacattle.rwandacattle.breeder.BreederLoginActivity;
+import com.andikasoft.rwandacattle.rwandacattle.helper.DatabaseHelper;
+import com.andikasoft.rwandacattle.rwandacattle.veterinarian.VetLoginActivity;
 
 public class MainActivity extends AppCompatActivity {
     TextView mTextView;
     Spinner mLanguage;
     ArrayAdapter<String> mAdapter;
+    DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        db = new  DatabaseHelper(this);
 
         Button breederButton = (Button) findViewById(R.id.breederButton);
         Button vetButton = (Button) findViewById(R.id.vetButton);

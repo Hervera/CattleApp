@@ -1,6 +1,6 @@
-package com.andikasoft.rwandacattle.rwandacattle;
+package com.andikasoft.rwandacattle.rwandacattle.veterinarian;
 
-
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,19 +9,26 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.andikasoft.rwandacattle.rwandacattle.HelpActivity;
+import com.andikasoft.rwandacattle.rwandacattle.MainActivity;
+import com.andikasoft.rwandacattle.rwandacattle.R;
 
-public class BreederLoginActivity extends AppCompatActivity implements View.OnClickListener{
+public class VetRegisterActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Toolbar toolbar;
-    private Button buttonLogin;
-    private TextView linkRegister;
+    private EditText editTextUsername, editTextPassword;
+    private Button btnRegister;
+    private TextView linkLogin;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.breeder_login_activity);
+        setContentView(R.layout.vet_register_activity);
 
         toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
@@ -30,28 +37,23 @@ public class BreederLoginActivity extends AppCompatActivity implements View.OnCl
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("");
 
-        buttonLogin = (Button) findViewById(R.id.btnBreederLogin);
-        linkRegister = (TextView) findViewById(R.id.linkBreederRegister);
-        buttonLogin.setOnClickListener(this);
-        linkRegister.setOnClickListener(this);
+        btnRegister = (Button) findViewById(R.id.btnVetRegister);
+        linkLogin = (TextView) findViewById(R.id.linkVetLogin);
 
+        btnRegister.setOnClickListener(this);
+        linkLogin.setOnClickListener(this);
 
-    }
-
-    private void userLogin() {
-        startActivity(new Intent(this, BreederHomeActivity.class));
-//        startActivity(new Intent(getApplicationContext(),  VetHomeActivity.class));
     }
 
     @Override
     public void onClick(View view) {
-        if (view == buttonLogin) {
-            userLogin();
-        }
-        if (view == linkRegister){
-            startActivity(new Intent(this, BreederRegisterActivity.class));
-        }
 
+        if (view == btnRegister){
+            Toast.makeText(this, "You clicked register", Toast.LENGTH_LONG).show();
+        }
+        if (view == linkLogin) {
+            startActivity(new Intent(this, VetLoginActivity.class));
+        }
     }
 
     @Override
@@ -70,7 +72,7 @@ public class BreederLoginActivity extends AppCompatActivity implements View.OnCl
                 startActivity(new Intent(this, HelpActivity.class));
                 break;
             case R.id.mainHome:
-                onBackPressed();
+                startActivity(new Intent(this, MainActivity.class));
                 break;
         }
         return true;

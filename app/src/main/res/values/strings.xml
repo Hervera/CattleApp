@@ -10,24 +10,27 @@
     </string-array>
 
     <string-array name="animal_categories_array">
-        <item>Cat</item>
-        <item>Cow</item>
-        <item>Chicken</item>
-        <item>Dog</item>
-        <item>Goat</item>
-        <item>Horse</item>
-        <item>Pig</item>
-        <item>Rabbit</item>
-        <item>Sheep</item>
+        <item name="animals">Animals</item>
+        <item name="cat">Cat</item>
+        <item name="cow">Cow</item>
+        <item name="chicken">Chicken</item>
+        <item name="dog">Dog</item>
+        <item name="goat">Goat</item>
+        <item name="horse">Horse</item>
+        <item name="pig">Pig</item>
+        <item name="rabbit">Rabbit</item>
+        <item name="sheep">Sheep</item>
     </string-array>
 
     <string name="gender" translatable="false">Gender</string>
     <string-array name="animal_gender_array">
+        <item>Gender</item>
         <item name="male">Male</item>
         <item name="female">Female</item>
     </string-array>
 
     <string-array name="animal_size_array">
+        <item>Size</item>
         <item>Big</item>
         <item>Medium</item>
         <item>Small</item>
@@ -47,6 +50,9 @@
     <string name="email">Email</string>
     <string name="name">Name</string>
     <string name="password">Password</string>
+
+
+    <string name="twitterUsername">\@joeytribbiani</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>

@@ -1,6 +1,6 @@
-package com.andikasoft.rwandacattle.rwandacattle;
+package com.andikasoft.rwandacattle.rwandacattle.veterinarian;
 
-import android.app.ProgressDialog;
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,22 +9,22 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class VetRegisterActivity extends AppCompatActivity implements View.OnClickListener{
+import com.andikasoft.rwandacattle.rwandacattle.HelpActivity;
+import com.andikasoft.rwandacattle.rwandacattle.R;
+
+
+public class VetLoginActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Toolbar toolbar;
-    private EditText editTextUsername, editTextPassword;
-    private Button btnRegister;
-    private TextView linkLogin;
-    private ProgressDialog progressDialog;
+    private Button buttonLogin;
+    private TextView linkRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.vet_register_activity);
+        setContentView(R.layout.vet_login_activity);
 
         toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
@@ -33,24 +33,25 @@ public class VetRegisterActivity extends AppCompatActivity implements View.OnCli
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("");
 
-        btnRegister = (Button) findViewById(R.id.btnVetRegister);
-        linkLogin = (TextView) findViewById(R.id.linkVetLogin);
+        buttonLogin = (Button) findViewById(R.id.btnVetLogin);
+        linkRegister = (TextView) findViewById(R.id.linkVetRegister);
 
-        btnRegister.setOnClickListener(this);
-        linkLogin.setOnClickListener(this);
-
+        buttonLogin.setOnClickListener(this);
+        linkRegister.setOnClickListener(this);
     }
+
 
     @Override
     public void onClick(View view) {
+        if (view == buttonLogin) {
+            startActivity(new Intent(this, VetHomeActivity.class));
+        }
+        if (view == linkRegister){
+            startActivity(new Intent(this, VetRegisterActivity.class));
+        }
 
-        if (view == btnRegister){
-            Toast.makeText(this, "You clicked Register", Toast.LENGTH_LONG).show();
-        }
-        if (view == linkLogin) {
-            startActivity(new Intent(this, VetLoginActivity.class));
-        }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -68,7 +69,7 @@ public class VetRegisterActivity extends AppCompatActivity implements View.OnCli
                 startActivity(new Intent(this, HelpActivity.class));
                 break;
             case R.id.mainHome:
-                startActivity(new Intent(this, MainActivity.class));
+                onBackPressed();
                 break;
         }
         return true;
